@@ -84,7 +84,7 @@
        </li>
      </ul>
      
-     <span>Designed by myself & Copyright &copy; 2022</span>
+     <div>Designed by myself & Copyright &copy; 2022</div>
      
     </footer>
   </div>
@@ -379,7 +379,7 @@ div.date{
   }
   footer ul{
     list-style: none;
-    width: 10%;
+    width: 6%;
     margin: 10px auto;
     padding: 0;
   }
@@ -387,11 +387,11 @@ div.date{
   footer ul li{
     display: inline;
     margin: 5px;
+    text-align: center;
   }
 
-  footer span{
-   position: relative;
-   left: 37.5%;
+  footer div{
+   text-align: center;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    font-size: 14px;
    color: #484b4e;
