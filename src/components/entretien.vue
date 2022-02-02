@@ -15,9 +15,9 @@
                     Modifier
                 </button>
                 <button>
-                    <span class="material-icons-outlined">
+                    <i class="material-icons-outlined">
                     close
-                    </span>
+                    </i>
                     Effacer
                </button>
             </div>
@@ -36,4 +36,16 @@ export default {
         width: 85%;
         margin: 5px auto;
     }
+
+     .actions button{
+    margin: 0 5px;
+    background-color: white;
+    border: solid 1px rgb(53, 53, 53);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .actions button i{
+    font-size: 20px;
+  }
 </style>

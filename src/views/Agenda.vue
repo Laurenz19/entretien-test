@@ -32,17 +32,17 @@
         </div>
       </div>
       <div class="add-btn">
-        <button>
-          <span class="material-icons-outlined">
+        <button class="cancel">
+          <i class="material-icons-outlined">
           clear
-          </span>
+          </i>
           Annuler
         </button>
-        <button>
+        <button class="submit">
           <i class="material-icons-outlined">
           save_alt
           </i>
-          enregistrer
+          Enregistrer
         </button>
       </div>
     </div>
@@ -90,6 +90,18 @@ export default {
     width: 36%;
     margin: 10px 8% 10px 8px;
     padding: 0;
+  }
+
+  .add-btn button{
+    margin: 0 5px;
+    background-color: white;
+    border: solid 1px rgb(53, 53, 53);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .add-btn button i{
+    font-size: 20px;
   }
 
   @media only screen and (max-width: 990px) {

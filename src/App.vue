@@ -275,9 +275,8 @@ div#agenda-filter{
 }
 
 div#agenda-list .all-list{
- height: 408px;
+ height: 420px;
  overflow-y: scroll;
- /*scrollbar-width: thin;*/
   scrollbar-color: white white;
   scrollbar-width: thin;
 }
