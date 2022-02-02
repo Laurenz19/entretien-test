@@ -1,8 +1,5 @@
 <template>
-    <div>
-        <span class="material-icons-outlined back">
-        arrow_back_ios_new
-        </span>
+    <div class="info">
         <div class="entretien-preview"> 
             <h3>Grand Titre de l'entretien</h3>
             <div class="entretien-info">
@@ -25,9 +22,6 @@
                </button>
             </div>
         </div>
-        <span class="material-icons-outlined next">
-        arrow_forward_ios
-        </span>
     </div>
 </template>
 
@@ -37,5 +31,9 @@ export default {
 }
 </script>
 <style>
-
+    
+    .info{
+        width: 85%;
+        margin: 5px auto;
+    }
 </style>

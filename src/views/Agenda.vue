@@ -1,6 +1,6 @@
 <template>
   <div class="entretien">
-    <app-entretien/>
+    <info-entretien/>
     <div class="agenda-form">
       <div class="add-form">
         <div class="input-agenda">
@@ -32,10 +32,18 @@
         </div>
       </div>
       <div class="add-btn">
-        <i class="material-icons-outlined">
-        save_alt
-        </i>
-        enregistrer
+        <button>
+          <span class="material-icons-outlined">
+          clear
+          </span>
+          Annuler
+        </button>
+        <button>
+          <i class="material-icons-outlined">
+          save_alt
+          </i>
+          enregistrer
+        </button>
       </div>
     </div>
   </div>
@@ -46,7 +54,51 @@ import Entretien from '../components/entretien.vue'
 export default {
   name:"Agenda",
   components:{
-    "app-entretien":Entretien,
+    "info-entretien":Entretien,
   }
 }
 </script>
+
+<style>
+  .agenda-form{
+    padding: 15px 80px;
+    margin: 5px;
+    border:solid 1px rgb(243, 242, 242);
+  }
+
+  .agenda-form label, .agenda-form input{
+    display: block;
+  }
+
+  .agenda-form input{
+    border: none;
+    border-bottom: solid 2px rgb(243, 242, 242);
+    width: 100%;
+    height: 25px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+  }
+
+  .add-form::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .input-agenda{
+    float: left;
+    width: 36%;
+    margin: 10px 8% 10px 8px;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: 990px) {
+    /* For mobile phones: */
+    .input-agenda{
+    float:none !important;
+    width: 100%;
+  }
+  
+}
+ 
+</style>

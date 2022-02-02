@@ -125,12 +125,11 @@ body{
 .content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(80px, auto);
+    grid-auto-rows: minmax(70px, auto);
     grid-gap:5px;
 
     grid-template-areas: 
     "header header header header"
-    "section main main main"
     "section main main main"
     "section main main main"
     "section main main main"
@@ -146,12 +145,11 @@ body{
          display: grid;
          grid-template-columns: repeat(4, 1fr);
          grid-gap:5px;
-         grid-auto-rows: minmax(80px, auto);
+         grid-auto-rows: minmax(70px, auto);
       
          grid-template-areas: 
          "header header header header"
          "section section section section"
-         "main main main main"
          "main main main main"
          "main main main main"
          "main main main main"
@@ -222,7 +220,7 @@ main{
     background-color: white;
     border: solid 1px rgb(238, 238, 238);
     box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
-    margin: 8px 15px;
+    margin: 8px 10px;
     border-radius: 3px;
 }
 
@@ -277,7 +275,7 @@ div#agenda-filter{
 }
 
 div#agenda-list .all-list{
- height: 422px;
+ height: 408px;
  overflow-y: scroll;
  /*scrollbar-width: thin;*/
   scrollbar-color: white white;
