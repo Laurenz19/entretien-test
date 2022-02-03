@@ -1,20 +1,20 @@
 <template>
     <div class="info">
         <div class="entretien-preview"> 
-            <h3>Grand Titre de l'entretien</h3>
+            <h3>{{entretien.titre}}</h3>
             <div class="entretien-info">
-                <span class="schedule">02 Fev 2022 à 15h:30</span>
-                <p>Entretien avec "Sambany Michel laurenzio"</p>
-                <span class="lieu">Lieu: Tanambao</span> 
+                <span class="schedule"> {{moment(entretien.date).format('LL')}} à {{entretien.heure}}</span>
+                <p>Entretien avec {{entretien.candidat.Nom}}</p>
+                <span class="lieu">Lieu: {{entretien.lieu}}</span> 
             </div>
             <div class="actions">
-                <button>
+                <button @click="edit">
                 <i class="material-icons-outlined">
                     edit
                 </i>
                     Modifier
                 </button>
-                <button>
+                <button @click="remove">
                     <i class="material-icons-outlined">
                     close
                     </i>
@@ -26,8 +26,28 @@
 </template>
 
 <script>
+import moment from 'moment'
+import { useStore } from 'vuex'
 export default {
-    name:"Entretien"
+    name:"Entretien",
+    props:{
+        entretien:{}
+    },
+    setup(props, {emit}){
+        let store = useStore()
+        let edit = function(){
+            store.dispatch('setEdit', {value:true, data:props.entretien})
+             emit('fillForm')
+        }
+
+        let remove = function(){
+             store.dispatch('setEdit', {value:true, data:props.entretien})
+             emit('remove')
+        }
+        return{
+            moment, edit, remove
+        }
+    }
 }
 </script>
 <style>
